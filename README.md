@@ -36,4 +36,5 @@ Start the app by running:
   - ```bash flutter run```
 
 Testing:
+  - ```bash flutter pub run build_runner build```
   - ```bash flutter test```
