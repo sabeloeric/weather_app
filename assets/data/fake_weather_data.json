@@ -1,0 +1,17 @@
+{
+  "Cape Town": {
+    "temperature": 25.0,
+    "humidity": 60.0,
+    "description": "Rainy"
+  },
+  "eGoli": {
+    "temperature": 45.0,
+    "humidity": 60.0,
+    "description": "Cloudy"
+  },
+  "New York": {
+    "temperature": 25.0,
+    "humidity": 60.0,
+    "description": "Sunny"
+  }
+}
