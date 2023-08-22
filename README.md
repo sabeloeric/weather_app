@@ -26,6 +26,9 @@ The project follows a clean and organized folder structure to promote maintainab
   - test: Contains test files corresponding to each layer, mirroring the main code structure.
 
 ## Getting Started
+
+<img width="315" alt="image" src="https://github.com/sabeloeric/weather_app/assets/48094027/089a5672-ddec-43f9-ab89-0561bf9d0f16">
+
 Clone this repository to your local
 
 
