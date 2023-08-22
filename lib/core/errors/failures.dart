@@ -19,3 +19,7 @@ class CacheFailure extends Failure {
   List<Object> get props => [];
 }
 
+class WeatherNotFoundFailure extends Failure {
+  @override
+  List<Object> get props => [];
+}

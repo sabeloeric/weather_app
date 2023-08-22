@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:weather_app/core/errors/failures.dart';
 import 'package:weather_app/domain/entities/weather.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 abstract class WeatherLocalDataSource {
   Future<Either<Failure, Weather>> getWeatherForCity(String cityName);
@@ -28,7 +28,7 @@ class WeatherLocalDataSourceImpl implements WeatherLocalDataSource {
         );
         return Right(weather);
       } else {
-        return Left(CacheFailure());
+        return Left(WeatherNotFoundFailure());
       }
     } catch (e) {
       return Left(CacheFailure());
@@ -36,7 +36,7 @@ class WeatherLocalDataSourceImpl implements WeatherLocalDataSource {
   }
 
   Future<String> _loadJsonData() async {
-    final jsonString = await File(jsonFilePath).readAsString();
+    final jsonString = await rootBundle.loadString(jsonFilePath);
     return jsonString;
   }
 }
